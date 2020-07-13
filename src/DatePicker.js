@@ -14,6 +14,7 @@ moment.loadPersian({ dialect: "persian-modern" });
 function DatePicker(props) {
   const [state, setState] = useState({
     month: props.selectedDate || moment(),
+    // Note: time must be rely on server not user device
     today: moment(),
     selectedDate: props.selectedDate || null,
   });
