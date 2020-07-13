@@ -1,0 +1,120 @@
+.calendar-wrapper {
+  width: 100%;
+  color: #000;
+  text-align: center;
+  z-index: 1;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin: 5px auto;
+  direction: rtl;
+  font-family: tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+.calendar {
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  border-radius: 7px;
+  padding-bottom: 15px;
+}
+.calendar > div {
+  position: relative;
+}
+
+.calendar__header {
+  margin: 0;
+  padding: 15px 10px;
+}
+.calendar__month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar__change-month-btn {
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 3px;
+  padding: 6px 9px;
+  border: 1px solid #e7e5e5;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar__change-month-btn:hover {
+  border: 1px solid #c4c4c4;
+}
+.calendar__change-month-btn svg {
+  height: 24px;
+  width: 24px;
+  fill: #82888a;
+}
+
+.calendar__body {
+  position: relative;
+  padding: 3px 5px;
+  margin-top: 2px;
+}
+
+.calendar__weekdays,
+.calendar__week {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px 0;
+}
+.calendar__month-name {
+  font-weight: bold;
+}
+.calendar__day,
+.calendar__weekday {
+  position: relative;
+  width: 14%;
+  margin: 0 1px;
+  text-align: center;
+  font-size: 11px;
+  float: left;
+}
+
+.calendar__weekdays {
+  font-weight: bold;
+}
+
+.calendar__day:before,
+.calendar__weekday:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.calendar__day-info {
+  line-height: 1.5;
+}
+.calendar__day-info,
+.calendar__weekday-info {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar__day {
+  color: #000;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.calendar__day.today {
+  border: 2px solid #00a598;
+}
+.calendar__day .selected-day {
+  background: #00a598;
+}
+
+.calendar__day-num {
+  font-weight: 700;
+  font-size: 14px;
+}
